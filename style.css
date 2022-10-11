@@ -29,6 +29,7 @@ nav{
     display: flex;
     align-items: center;
     font-weight: 600;
+    text-align: center;
 }
 
 .cart img{
@@ -42,7 +43,7 @@ nav{
 
 .overlay{
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 20px;
     color: #ffffff;
     font-weight: 800;
@@ -146,4 +147,71 @@ footer{
 
 .info h3{
     padding: 10px 0;
+}
+
+@media(max-width:1024px) {
+    .container{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+
+    .books .container{
+        grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+
+    .overlay{
+        font-size: 2.5rem;
+        top: 70px;
+    }
+}
+
+@media(max-width:768px) {
+    .container{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    .books .container{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+
+    .overlay{
+        font-size: 1.5rem;
+        top: 60px;
+    }
+
+    .overlay span{
+        font-size: .5rem;
+    }
+}
+
+@media(max-width:480px) {
+    nav{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cart img{
+        padding-right: 2px;
+    }
+
+    .products{
+        text-align: center;
+    }
+
+    .container{
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+
+    .books .container{
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        padding: 0 30px;
+    }
+
+    .handmade .container{
+        padding: 0 20px;
+    }
+
+    .overlay{
+        font-size: 1rem;
+        top: 60px;
+    }
 }
