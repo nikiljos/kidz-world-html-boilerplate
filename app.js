@@ -30,5 +30,5 @@ document.querySelector(".cart").onclick=()=>{
     })
     let dollars=Math.floor(total)
     let cents=Math.round((total%1)*100)
-    console.log(`The total amount is ${dollars}$ and ${cents}`)
+    console.log(`The total amount is ${dollars}$ and ${cents} cents`)
 }
