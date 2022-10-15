@@ -25,10 +25,19 @@ document.getElementById("products").onclick=(e)=>{console.log();
 }
 
 document.querySelector(".cart").onclick=()=>{
-    Object.keys(cartData).forEach(key=>{
-        console.log(`Item name: ${key} - Quantity: ${cartData[key]}`)
-    })
+    let cartProducts = Object.keys(cartData);
+    if (cartProducts.length == 0) {
+        alert("Please add some items to the cart to proceed!");
+        return;
+    }
+    let res="Order Details\n\n"
+    cartProducts.forEach((key) => {
+        res += `${key} - ${cartData[key]}\n`;
+    });
     let dollars=Math.floor(total)
     let cents=Math.round((total%1)*100)
-    console.log(`The total amount is ${dollars}$ and ${cents} cents`)
+    res+=`\nTotal Price: $${dollars} ${cents}c`
+    waURL = `https://api.whatsapp.com/send?phone=+918792928070&text=${encodeURI(res)}`;
+    // console.log(res,waURL)
+    window.open(waURL)
 }
