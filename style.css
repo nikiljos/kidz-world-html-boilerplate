@@ -30,6 +30,7 @@ nav{
     align-items: center;
     font-weight: 600;
     text-align: center;
+    cursor: pointer;
 }
 
 .cart img{
@@ -68,6 +69,7 @@ nav{
     font-weight: 500;
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .add-btn img{
